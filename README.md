@@ -1,2 +1,0 @@
-# Valenzuela-Ruiz-Alejandro
-#sdsdsd
