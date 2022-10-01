@@ -1,1 +1,77 @@
+Reglas:
+(defrule r1
+  (monkey near door)
+  (monkey farfrom window)
+      =>
+  (printout t "monkey goes to the box" crlf)
+  (assert(monkey near box))
+  (retract 1)
+  (retract 2)
+)
 
+(defrule r2
+  (monkey near box)
+  (monkey hands-free)
+      =>
+  (printout t "monkey took the box" crlf)
+  (retract 4) (assert(monkey hands-busy))
+  (assert(monkey grabbed-box))
+)
+
+(defrule r3
+  (monkey near box)
+  (monkey hands-busy)
+  (monkey grabbed-box)
+      =>
+  (printout t "monkey goes below the banana" crlf)
+  (assert(monkey below-banana))
+)
+
+(defrule r4
+  (monkey below-banana)
+  (monkey grabbed-box)
+      =>
+  (printout t "monkey drop the box" crlf)
+  (retract 5)
+  (retract 6)
+  (assert(monkey hands-free))
+  (assert(monkey dropped-box))
+)
+
+(defrule r5
+  (monkey near box)
+  (monkey hands-free)
+  (monkey dropped-box)
+  (monkey below-banana)
+      =>
+  (printout t "monkey climbed on top of the box" crlf)
+  (assert(monkey on-top-of-box))
+)
+
+(defrule r6
+  (monkey below-banana)
+  (monkey on-top-of-box)
+  (monkey hands-free)
+      =>
+  (printout t "monkey took the banana" crlf)
+  (retract 7)
+  (retract 8)
+  (assert(monkey grabbed-banana))
+  (assert(monkey hands-busy))
+)
+
+(defrule r7
+  (monkey hands-busy)
+  (monkey grabbed-banana)
+      =>
+  (printout t "monkey peeled the banana" crlf)
+  (assert(monkey peeled-banana))
+)
+(defrule r8
+  (monkey hands-busy)
+  (monkey grabbed-banana)
+  (monkey peeled-banana)
+      =>
+  (printout t "monkey ate the banana" crlf)
+  (assert(monkey ate-banana))
+)
