@@ -4,23 +4,23 @@ import jade.core.*;
 import jade.core.behaviours.*;
 import jade.lang.acl.ACLMessage;
  
-public class AgenteReceptor extends Agent {
+public class medicAgent extends Agent {
    
     protected void setup() {
-        addBehaviour(new ReceptorComportaminento());
+        addBehaviour(new medicBehaviour());
     }
 
-   private class ReceptorComportaminento extends SimpleBehaviour {
+   private class medicBehaviour extends SimpleBehaviour {
             private boolean fin = false;
        
             public void action() {
-                System.out.println(" Preparandose para recibir");
+                System.out.println(" Preparing to receive");
  
             //Obtiene el primer mensaje de la cola de mensajes
                 ACLMessage mensaje = receive();
  
                 if (mensaje!= null) {
-                    System.out.println(getLocalName() + ": acaba de recibir el siguiente mensaje: ");
+                    System.out.println(getLocalName() + ": you just receive the next message: ");
                     System.out.println(mensaje.toString());
                     clips.load("load-enfermedades.clp");
                     System.out.println("El diagnostico es: ");
