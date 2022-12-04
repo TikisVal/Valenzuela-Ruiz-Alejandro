@@ -7,7 +7,7 @@ import jade.lang.acl.*;
 public class pacientAgent extends Agent {
 
     protected void setup() {
-        addBehaviour(new EmisorComportaminento());
+        addBehaviour(new pacientBehaviour());
     }
 
    private class pacientBehaviour extends SimpleBehaviour {
