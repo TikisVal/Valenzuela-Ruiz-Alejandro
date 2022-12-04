@@ -4,19 +4,19 @@ import jade.core.*;
 import jade.core.behaviours.*;
 import jade.lang.acl.*;
  
-public class AgenteEmisor extends Agent {
+public class pacientAgent extends Agent {
 
     protected void setup() {
         addBehaviour(new EmisorComportaminento());
     }
 
-   private class EmisorComportaminento extends SimpleBehaviour {
+   private class pacientBehaviour extends SimpleBehaviour {
         boolean fin = false;
       
         public void action() {
-            System.out.println(getLocalName() +": Preparandose para enviar un mensaje a receptor");
+            System.out.println(getLocalName() +": Preparing to send a message to the medic");
             AID id = new AID();
-            id.setLocalName("receptor");
+            id.setLocalName("medic");
  
         // Creación del objeto ACLMessage
             ACLMessage mensaje = new ACLMessage(ACLMessage.INFORM);
