@@ -25,7 +25,7 @@ public class pacientAgent extends Agent {
             mensaje.setSender(getAID());
             mensaje.setLanguage("English");
             mensaje.addReceiver(id);
-            mensaje.setContent("I just calculated the Simple Linear Regression");
+            mensaje.setContent(clips.load("load-sintomas.clp"));
  
         //Envia el mensaje a los destinatarios
             send(mensaje);
