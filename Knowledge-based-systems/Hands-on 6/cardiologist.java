@@ -22,6 +22,9 @@ public class AgenteReceptor extends Agent {
                 if (mensaje!= null) {
                     System.out.println(getLocalName() + ": acaba de recibir el siguiente mensaje: ");
                     System.out.println(mensaje.toString());
+                    clips.load("load-enfermedades.clp");
+                    System.out.println("El diagnostico es: ");
+                    clips.run();
                     fin = true;
                 }
             }
