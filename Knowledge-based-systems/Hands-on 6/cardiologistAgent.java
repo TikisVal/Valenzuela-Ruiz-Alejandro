@@ -3,6 +3,7 @@ package examples.messaging;
 import jade.core.*;
 import jade.core.behaviours.*;
 import jade.lang.acl.ACLMessage;
+import net.sf.clipsrules.jni.*;
  
 public class cardiologistAgent extends Agent {
    
