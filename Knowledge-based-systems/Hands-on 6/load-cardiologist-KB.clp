@@ -1,15 +1,15 @@
-(defrule stomachFlu
-  (symptom diarrea)
-  (symptom stomachache)
-  (symptom vomiting)
+(defrule arrhythmia
+  (symptom chestPain)
+  (symptom lossOfHeartbeat)
+  (symptom shortnessOfBreath)
       =>
-  (printout t "Pacient has stomach flu" crlf)
+  (printout t "Pacient has arrhythmia" crlf)
 )
 
-(defrule colitis
-  (symptom rectal bleeding)
-  (symptom constipation)
-  (symptom stomachache)
+(defrule heartAttack
+  (symptom chestDiscomfort)
+  (symptom shortnessOfBreath)
+  (symptom upperBodyDiscomfort)
       =>
-  (printout t "Pacient has colitis" crlf)
+  (printout t "Pacient has a heartAttack" crlf)
 )
