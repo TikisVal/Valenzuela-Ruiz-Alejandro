@@ -12,5 +12,5 @@
 (deffacts pacients
     (symptoms  (symptom1 stomachache)  (symptom2  diarrea)   (symptom3 vomiting))
     (symptoms  (symptom1 chestPain)  (symptom2  shortnessOfBreath)   (symptom3 lossOfHeartbeat))
-    (symptoms  (symptom1 Fred)  (symptom2  male)   (symptom3 26))
+    (symptoms  (symptom1 itching)  (symptom2  drySkin)   (symptom3 blisters))
 )
