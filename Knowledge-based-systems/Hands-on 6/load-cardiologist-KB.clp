@@ -1,5 +1,5 @@
-(defrule my-rule1
-   (person (name ?n)) => (printout t ?n  crlf ))
+(defrule stomachFlu
+   (symptom (name ?n)) => (printout t ?n  crlf ))
 
 (defrule my-rule2
    (person (age ?a)) => (printout t ?a  crlf ))
