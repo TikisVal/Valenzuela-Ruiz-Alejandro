@@ -6,10 +6,10 @@
   (printout t "Pacient has stomach flu" crlf)
 )
 
-(defrule stomachFlu
-  (symptom diarrea)
+(defrule colitis
+  (symptom rectal bleeding)
+  (symptom constipation)
   (symptom stomachache)
-  (symptom vomiting)
       =>
-  (printout t "Pacient has stomach flu" crlf)
+  (printout t "Pacient has colitis" crlf)
 )
