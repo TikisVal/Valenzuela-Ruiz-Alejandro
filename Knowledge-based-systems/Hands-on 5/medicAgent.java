@@ -1,5 +1,3 @@
-package examples.messaging;
- 
 import jade.core.*;
 import jade.core.behaviours.*;
 import jade.lang.acl.ACLMessage;
