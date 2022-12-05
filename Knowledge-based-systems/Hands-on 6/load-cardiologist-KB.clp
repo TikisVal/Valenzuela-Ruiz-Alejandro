@@ -1,11 +1,15 @@
 (defrule stomachFlu
-   (symptom (name ?n)) => (printout t ?n  crlf ))
+  (symptom diarrea)
+  (symptom stomachache)
+  (symptom vomiting)
+      =>
+  (printout t "Pacient has stomach flu" crlf)
+)
 
-(defrule my-rule2
-   (person (age ?a)) => (printout t ?a  crlf ))
-
-(defrule my-rule3
-   (person (gender female) (name ?x)) => (printout t ?x " is female" crlf ))
-
-(defrule my-rule4
-   (person (partner ?p) (name ?n)) => (printout t ?p " is " ?n "'s partner" crlf ))
+(defrule colitis
+  (symptom rectal bleeding)
+  (symptom constipation)
+  (symptom stomachache)
+      =>
+  (printout t "Pacient has colitis" crlf)
+)
